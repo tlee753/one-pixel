@@ -17,7 +17,7 @@ def convertBit(image):
 
 outputVideo = bands.map(convertBit)
 
-print "about to build video"
+print("about to build video")
 
 out = batch.Export.video.toDrive(outputVideo, description='timelapse-1', dimensions = 720, framesPerSecond = 2, region=(
 [-84.33036804199219,
@@ -34,4 +34,4 @@ out = batch.Export.video.toDrive(outputVideo, description='timelapse-1', dimensi
 
 process = batch.Task.start(out)
 
-print "process sent to cloud"
+print("process sent to cloud")
